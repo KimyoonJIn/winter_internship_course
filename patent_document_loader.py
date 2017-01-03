@@ -63,7 +63,8 @@ def get_patent_document_list(filename):
         patent_document_list.append("".join(full_document_list[prior: int(start_index)]))
         prior = start_index
     else:
-        patent_document_list.append("".join(full_document_list[prior: int(start_index)]))
+        patent_document_list.append("".join(full_document_list[prior:]))
+    print(patent_document_list)
     logging.info("Get document number of documents :" + str(len(patent_document_list)))
 
     return patent_document_list
